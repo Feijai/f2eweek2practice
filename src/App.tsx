@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Home from './pages/Home'
 import Header from './components/Header';
 import LottoryTicket from './pages/LottoryTicket';
+import Clock from './pages/Clock';
+import PdfSign from './pages/PdfSign';
 
 const PageCss = styled.div`
   @media (max-width:996px) {
@@ -18,6 +20,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={< Home />} />
           <Route path='/lottoryTicket' element={<LottoryTicket />} />
+          <Route path='/clock' element={<Clock />} />
+          <Route path='/pdfSign' element={<PdfSign />} />
+          
         </Routes>
       </PageCss>
     </>

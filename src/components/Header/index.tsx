@@ -10,6 +10,12 @@ export default function Header() {
             <Link to='/lottoryTicket' className='ms-3'>
                 刮刮樂
             </Link>
+            <Link to='/clock' className='ms-3'>
+                時鐘
+            </Link>
+            <Link to='/pdfSign' className='ms-3'>
+                pdf簽名
+            </Link>
         </div>
 )
 }
