@@ -68,6 +68,7 @@ export default function LottoryTicket() {
             ctx.globalCompositeOperation = "destination-out";
             ctx.arc(x, y, 10, 0, 2 * Math.PI);
             ctx.fill();
+            ctx.closePath();
             getFilledPercentage(ctx); // 驗證是否已刮大於60%
         };
         // 手機 touchmove
@@ -81,6 +82,7 @@ export default function LottoryTicket() {
             ctx.globalCompositeOperation = "destination-out";
             ctx.arc(x, y, 10, 0, 2 * Math.PI);
             ctx.fill();
+            ctx.closePath();
             getFilledPercentage(ctx); // 驗證是否已刮大於60%
         })
 
