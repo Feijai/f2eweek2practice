@@ -16,6 +16,9 @@ export default function Header() {
             <Link to='/pdfSign' className='ms-3'>
                 pdf簽名
             </Link>
+            <Link to='/protocolPage' className='ms-3'>
+                ProtocolPage
+            </Link>
         </div>
 )
 }

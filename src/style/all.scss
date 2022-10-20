@@ -18,9 +18,6 @@
   
   body {
     margin: 0;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif; */
     font-family: WenQuanYi Zen Hei, STHeitiTC-Light, STHeitiTC-Medium, LiHei Pro,
       Microsoft JhengHei, PMingLiU, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +31,6 @@
     margin: 0px;
     padding: 0px;
     border: 0px;
-    overflow: hidden;
   }
   .jspaint {
     background: var(--ButtonFace);

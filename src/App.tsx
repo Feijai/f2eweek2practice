@@ -1,16 +1,14 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom'
-import styled from 'styled-components';
-import Home from './pages/Home'
-import Header from './components/Header';
-import LottoryTicket from './pages/LottoryTicket';
-import Clock from './pages/Clock';
-import PdfSign from './pages/PdfSign';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import styled from "styled-components";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import LottoryTicket from "./pages/LottoryTicket";
+import Clock from "./pages/Clock";
+import PdfSign from "./pages/PdfSign";
+import ProtocolPage from "./pages/ProtocolPage";
 
-const PageCss = styled.div`
-  @media (max-width:996px) {
-  }
-`
+const PageCss = styled.div``;
 
 const App: React.FC = () => {
   return (
@@ -18,15 +16,15 @@ const App: React.FC = () => {
       <Header />
       <PageCss>
         <Routes>
-          <Route path="/" element={< Home />} />
-          <Route path='/lottoryTicket' element={<LottoryTicket />} />
-          <Route path='/clock' element={<Clock />} />
-          <Route path='/pdfSign' element={<PdfSign />} />
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/lottoryTicket" element={<LottoryTicket />} />
+          <Route path="/clock" element={<Clock />} />
+          <Route path="/pdfSign" element={<PdfSign />} />
+          <Route path="/protocolPage" element={<ProtocolPage />} />
         </Routes>
       </PageCss>
     </>
   );
-}
+};
 
-export default App
+export default App;
