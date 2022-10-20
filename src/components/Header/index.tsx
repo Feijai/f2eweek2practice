@@ -13,11 +13,8 @@ export default function Header() {
             <Link to='/clock' className='ms-3'>
                 時鐘
             </Link>
-            <Link to='/pdfSign' className='ms-3'>
-                pdf簽名
-            </Link>
             <Link to='/protocolPage' className='ms-3'>
-                ProtocolPage
+                Pdf 簽名
             </Link>
         </div>
 )
