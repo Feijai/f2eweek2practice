@@ -25,7 +25,7 @@ const PDFViewer = (props: IProps) => {
   // canvas event
   useHandleCanvasEvent(props, pdfRef);
 
-  // 渲染pdf
+  // render pdf
   useEffect(() => {
     if (pdfReadBuffer) {
       const linkService = new pdfjsViewer.PDFLinkService({
@@ -44,13 +44,13 @@ const PDFViewer = (props: IProps) => {
       linkService.setViewer(pdfViewer);
       pdfViewerRef.current = pdfViewer;
       linkServiceRef.current = linkService;
-      // 设置初始缩放
+      // 設置初始缩放
       pdfViewer.currentScaleValue = DEFAULT_SCALE_VALUE;
       eventBusRef.current.on("pagesloaded", function () {
         pdfViewerRef.current.currentScaleValue = DEFAULT_SCALE_VALUE;
         pdfBeginLoaded(true);
       });
-      // 渲染页面
+      // render
       const initialViewer = async (pdfBuffer: any) => {
         pdfFileRef.current = pdfjs.getDocument(pdfBuffer).promise;
         pdfFileRef.current
@@ -80,10 +80,10 @@ const PDFViewer = (props: IProps) => {
             <input
               type="file"
               accept="pdf"
-              title="上传PDF"
+              title="上傳PDF"
               onChange={uploadPdf}
             />
-            <img src={pdfIcon} title="上传PDF" alt="上传PDF" />
+            <img src={pdfIcon} title="上傳PDF" alt="上傳PDF" />
           </div>
         ) : null}
       </div>

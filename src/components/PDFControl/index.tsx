@@ -44,7 +44,7 @@ const PDFControl = memo((props: Props) => {
           <input
             type="file"
             accept="pdf"
-            title="上传PDF"
+            title="上傳PDF"
             onChange={uploadPdf}
           />
           <img className="item-icon" src={pdfIcon} alt="zoomout" />

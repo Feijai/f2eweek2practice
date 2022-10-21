@@ -23,6 +23,7 @@ export const useEditPdf = (
         const image = createImage(signSrc);
         const signPosition = genSignInitState() as ISignPosition;
         let newSignList = [...signList]
+
         newSignList.push({
             ...signPosition,
             image,

@@ -19,8 +19,12 @@ interface CanvasSize {
 
 const moveEvent = getMoveEvent();
 
-export const useCanvas = (writeSign: any, signInfo: SignInfo, canvasSize: CanvasSize, saveClipSize: any): React.RefObject<HTMLCanvasElement> => {
-    console.log('===signInfo===', signInfo)
+export const useCanvas = (
+    writeSign: any,
+    signInfo: SignInfo,
+    canvasSize: CanvasSize,
+    saveClipSize: any
+): React.RefObject<HTMLCanvasElement> => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const oldOffset = useRef<ICanvasPosition>({} as ICanvasPosition);
     const newOffset = useRef<ICanvasPosition>({} as ICanvasPosition);
@@ -78,8 +82,6 @@ export const useCanvas = (writeSign: any, signInfo: SignInfo, canvasSize: Canvas
             saveClipSize({
                 w, h, x: minX - 5, y: minY - 5
             });
-            console.log(`x:${minX}; y:${minY}; width:${w}; height:${h}`)
-            // console.log(width, height);
             isMoveRef.current = false;
             writeSign(true);
         }
@@ -117,11 +119,7 @@ export const useCanvas = (writeSign: any, signInfo: SignInfo, canvasSize: Canvas
     }
 
     useEffect(() => {
-        console.log('in effect1')
-        console.log('===canvasSize===', canvasSize)
-        console.log('===canvasRef===', canvasRef)
         if (!canvasRef.current) return;
-        console.log(`当前canvas大小：${JSON.stringify(canvasSize)}`)
         canvasRef.current.width = isPC ? 800 : canvasSize.width;
         canvasRef.current.height = canvasSize.height;
 
@@ -135,7 +133,6 @@ export const useCanvas = (writeSign: any, signInfo: SignInfo, canvasSize: Canvas
     }, [canvasSize]);
 
     useEffect(() => {
-        console.log('in useeffect2')
         if (!canvasRef.current) return;
         setCanvas(canvasRef.current, signInfo)
     }, [signInfo]);

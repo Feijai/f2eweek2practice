@@ -48,7 +48,6 @@ export default function LottoryTicket() {
 
         let isDraw = false;
         canvas.onmousedown = () => {
-            console.log('in down')
             isDraw = true;
         };
         //手機touchStart
@@ -57,14 +56,12 @@ export default function LottoryTicket() {
         })
 
         canvas.onmousemove = (event: any) => {
-            console.log('in onmousemove')
             if (!isDraw) return;
             const point = getClientOffset(event);
             const x = point?.x;
             const y = point?.y;
 
             // 遮盖策略
-            console.log(x,y)
             ctx.globalCompositeOperation = "destination-out";
             ctx.arc(x, y, 10, 0, 2 * Math.PI);
             ctx.fill();
@@ -77,7 +74,6 @@ export default function LottoryTicket() {
             const rect = canvasRef.current.getBoundingClientRect();
             const x = e.touches[0].clientX - rect.left;
             const y = e.touches[0].clientY - rect.top;
-            console.log(x,y)
             // 遮盖策略
             ctx.globalCompositeOperation = "destination-out";
             ctx.arc(x, y, 10, 0, 2 * Math.PI);
@@ -88,7 +84,6 @@ export default function LottoryTicket() {
 
 
         canvas.onmouseup = () => {
-            console.log('in onmouseup')
             isDraw = false;
         };
         // 手機 touchend

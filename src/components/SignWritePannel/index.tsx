@@ -61,7 +61,7 @@ function SignWritePannel(props: Props) {
   const [lineWidth, setLineWidth] = useState(7);
   const [color, setColor] = useState("black");
   const [canvasSize, updateCanvasSize] = useState<CanvasSize>(canvasInitSize);
-  console.log(canvasSize);
+  
   const canvasRef = useCanvas(
     writeSign,
     { lineWidth, color },

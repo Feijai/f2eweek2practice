@@ -38,6 +38,7 @@ function ProtocolPage() {
     signList,
     pdfReadBuffer,
   } = useEditPdf(curPdfCanvas as HTMLCanvasElement, isPdfEndLoadRef);
+  
   // 渲染层绘画
   useDrawSignInCanvas(
     curPdfCanvas as HTMLCanvasElement,
