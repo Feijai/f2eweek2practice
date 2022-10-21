@@ -49,6 +49,8 @@ function ProtocolPage() {
   const showSignWritePannel = useCallback(() => {
     if (curPdfCanvas) {
       toggleShowSignWritePannel(true);
+    }else{
+      alert("請選擇簽名pdf頁面")
     }
   }, [curPdfCanvas]);
   const hideSignWritePannel = useCallback(() => {
